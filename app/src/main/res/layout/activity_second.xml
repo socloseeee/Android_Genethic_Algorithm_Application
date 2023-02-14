@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_x="144dp"
+        android:layout_y="296dp"
+        android:onClick="goBack"
+        android:text="Вернуться"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="399dp"
+        tools:text="Вернуться" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="158dp"
+        android:layout_y="220dp"
+        android:text="CheckBox" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="90dp"
+        android:layout_y="372dp" />
+</AbsoluteLayout>
