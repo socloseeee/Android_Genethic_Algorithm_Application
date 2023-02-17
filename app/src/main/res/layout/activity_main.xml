@@ -20,14 +20,6 @@
         tools:layout_editor_absoluteY="341dp"
         tools:text="Перейти на другую страницу" />
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="187dp"
-        android:layout_y="314dp" />
-
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
@@ -35,11 +27,13 @@
         android:layout_x="31dp"
         android:layout_y="410dp" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_x="1dp"
-        android:layout_y="281dp"
-        android:background="?android:attr/listDivider" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="157dp"
+        android:layout_y="271dp"
+        android:onClick="menu_click"
+        android:text="Menu" />
+
 </AbsoluteLayout>

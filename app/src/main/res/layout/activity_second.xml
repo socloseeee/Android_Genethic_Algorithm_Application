@@ -24,14 +24,27 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="158dp"
-        android:layout_y="220dp"
-        android:text="CheckBox" />
+        android:layout_x="169dp"
+        android:layout_y="122dp"
+        android:text="Silent"
+        android:textColor="@color/white" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
+    <CheckBox
+        android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="90dp"
-        android:layout_y="372dp" />
+        android:layout_x="170dp"
+        android:layout_y="181dp"
+        android:text="Fast"
+        android:textColor="@color/white" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="170dp"
+        android:layout_y="236dp"
+        android:text="Balance"
+        android:textColor="@color/white" />
+
 </AbsoluteLayout>
