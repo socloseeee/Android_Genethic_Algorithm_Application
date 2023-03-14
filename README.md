@@ -55,7 +55,8 @@ SharedPreferences settings = getSharedPreferences("PreferencesName",
 Теперь рассмотрим практический пример. Создайте новое приложение с пустой
 активностью (__Empty Activity__). В файле activity_main.xml определим интерфейс пользователя
 (листинг 8.3).
-Листинг 8.3. Интерфейс приложения (файл activity_main.xml)
+
+#### Листинг 8.3. Интерфейс приложения (файл activity_main.xml)
 ```
 <LinearLayout кmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
@@ -83,3 +84,8 @@ SharedPreferences settings = getSharedPreferences("PreferencesName",
     android:onClick="getName"/>
 </LinearLayout>   
 ```
+
+На экране присутствуют две кнопки: для сохранения и для вывода ранее сохраненного
+значения, а таюке поле для ввода и текстовое поле для вывода сохраненной
+настройки (рис. 8.5).
+![img.png](img.png)
