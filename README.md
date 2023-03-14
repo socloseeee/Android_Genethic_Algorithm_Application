@@ -18,8 +18,7 @@
 ```
 import android.content.SharedPreferences;
 // .......................... .
-SharedPreferences settings = getSharedPreferences("PreferencesName",
-    MODE PRIVATE) ;
+SharedPreferences settings = getSharedPreferences("PreferencesName", MODE PRIVATE) ;
 ```
 Первый параметр метода указывает на название предпочтения. В показанном случае
 это название: ```"PreferencesName"```. Если предпочтений с подобным названием
@@ -57,7 +56,7 @@ SharedPreferences settings = getSharedPreferences("PreferencesName",
 (листинг 8.3).
 
 #### Листинг 8.3. Интерфейс приложения (файл activity_main.xml)
-```
+```xml
 <LinearLayout кmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
@@ -93,7 +92,7 @@ SharedPreferences settings = getSharedPreferences("PreferencesName",
 Теперь займемся кодом приложения, приведенном в файле MainActivity.java (листинг
 8.4).
 #### Листинг 8.4. Полный код приложения (файл MainActivity.java)
----java
+```java
 package corn.example.den.prefs;
 
 import android.content.SharedPreferences;
@@ -107,12 +106,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String PREFS_FILE = "Account";
-    private static final String PREF NАМЕ = "Name";
+    private static final String PREF_NАМЕ = "Name";
     SharedPreferences settings;
     @OVerride
     protected void onCreate(Bundle savedinstanceState) {
         super.onCreate(savedinstanceState);
-        setContentView(R.layout.activity_main};
+        setContentView(R.layout.activity_main);
         settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE);
     }
   
@@ -133,4 +132,4 @@ public class MainActivity extends AppCompatActivity {
         nameView.setText(name);
     }
 }
----
+```
