@@ -52,3 +52,34 @@ SharedPreferences settings = getSharedPreferences("PreferencesName",
   памяти и лишь затем в результате асинхронной операции записывается
   на мобильное устройство.
 
+Теперь рассмотрим практический пример. Создайте новое приложение с пустой
+активностью (__Empty Activity__). В файле activity_main.xml определим интерфейс пользователя
+(листинг 8.3).
+Листинг 8.3. Интерфейс приложения (файл activity_main.xml)
+```
+<LinearLayout кmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+  
+  <EditText
+    android:id="@+id/nameBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Bвeдитe имя"/>
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Coxpaнить"
+    android:onClick="saveName"/>
+  <TextView
+    android:id="@+id/nameView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Пoлyчить имя"
+    android:onClick="getName"/>
+</LinearLayout>   
+```
