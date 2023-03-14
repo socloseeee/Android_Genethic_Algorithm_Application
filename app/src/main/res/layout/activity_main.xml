@@ -1,67 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/nameBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bвeдитe имя"/>
     <Button
-        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_x="65dp"
-        android:layout_y="348dp"
-        android:onClick="startNewActivity"
-        android:text="Перейти на другую страницу"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="341dp"
-        tools:text="Перейти на другую страницу" />
-
-
-    <CalendarView
-        android:id="@+id/calendarView"
+        android:text="Coxpaнить"
+        android:onClick="saveName"/>
+    <TextView
+        android:id="@+id/nameView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="31dp"
-        android:layout_y="410dp" />
-
+        android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="157dp"
-        android:layout_y="271dp"
-        android:onClick="menu_click"
-        android:text="Menu" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="150dp"
-        android:layout_y="180dp"
-        android:onClick ="transitions_click"
-        android:text="Картинки" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="162dp"
-        android:layout_y="28dp"
-        android:onClick="files_click"
-        android:text="Файлы" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="158dp"
-        android:layout_y="96dp"
-        android:onClick="Namefiles_click"
-        android:text="Файлы2" />
-
-</AbsoluteLayout>
+        android:text="Пoлyчить имя"
+        android:onClick="getName"/>
+</LinearLayout>

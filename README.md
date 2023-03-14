@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         prefEditor.apply();
     }
   
-    public void getNarne(View view) {
+    public void getName(View view) {
         // получаем сохраненное имя
         TextView nameView = (TextView) findViewByid(R.id.nameView);
         String name = settings.getString(PREF_NAМE,"n/a");
@@ -138,8 +138,66 @@ public class MainActivity extends AppCompatActivity {
 значение по умолчанию - __n/a__ (рис. 8.6).
 Теперь введите имя (см. рис. 8.6), нажмите кнопку __Сохранить__, а затем кнопку
 __Получить имя__. Вы должны увидеть введенное ранее имя пользователя (рис. 8.7).
-/
-Часто возникает задача автоматиче~ки сохраЮIТЬ вводимые данные при выходе
+Часто возникает задача автоматичеcки сохранить вводимые данные при выходе
 пользователя из ```activity```. Для этого мы можем переопределить метод ```onPause``` (листинг
 8.5).
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+
+#### Листинг 8.5. Автоматическое сохранение настроек
+```java
+package com.example.den.prefs;
+
+import android.content.SharedPreferences;
+import android.support.v7.app.AppCornpatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+public class MainActivity extends AppCornpatActivity {
+
+  private static final String PREFS_FILE = "Account";
+  private static final String PREF_NAME = "Name";
+  EditText nameBox;
+  SharedPreferences settings;
+  SharedPreferences.Editor prefEditor;
+
+  @OVerride
+  protected void onCreate(Bundle savedinstanceState) {
+    super.onCreate(savedlnstanceState);
+    setContentView(R.layout.activity_main);
+
+    nameBox = (EditText) findViewByid(R.id.nameВox);
+    settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE);
+
+    // nолучаем на стройки
+    String name = settings.getString(PREF_NAМE, "");
+    nameBox.setText(name);
+  }
+
+  @OVerride
+  protected void onPause() {
+    super.onPause();
+
+    EditText nameBox = (EditText) findViewByid(R.id.nameВox);
+    String name = nameBox.getText().toString();
+    // сохраняем в настройках
+    prefEditor = settings.edit();
+    prefEditor.putString(PREF_NAМE, nameBox.getText().toString());
+    prefEditor.apply();
+  }
+
+  public void saveName(View view) {
+
+  }
+
+  public void getName(View view) {
+
+  }
+}
+```
+
+На этом мы завершаем разговор о базовом программировании для Android и переходим
+к следующей части книги, в которой будем разбираться с построением
+сложных Аndrоid-приложений .
 
