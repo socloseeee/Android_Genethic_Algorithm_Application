@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="transition_image" type="id" />
+    <item name="start_transition" type="id" />
+    <item name="reverse_transition" type="id" />
+    <item name="open_text" type="id" />
+    <item name="saving" type="id" />
+    <item name="nameBox" type="id" />
+    <item name="nameView" type="id" />
+</resources>

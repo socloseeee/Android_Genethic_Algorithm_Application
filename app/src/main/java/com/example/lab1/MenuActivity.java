@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.media.MediaRecorder;
 
 public class MenuActivity extends AppCompatActivity {
 
