@@ -201,7 +201,14 @@ public class MainActivity extends AppCornpatActivity {
 к следующей части книги, в которой будем разбираться с построением
 сложных Аndrоid-приложений .
 
-<img alt="img_4.png" height="100" src="img_4.png" width="100"/>  __ЧАСТЬ III__
+
+
+
+
+
+
+
+<img alt="img_4.png" height="50" src="img_4.png" width="50"/>  __ЧАСТЬ III__
 __Построение сложного приложения__
 
 __Глава 9.__ Межпроцессное взаимодействие Аndгоid-приложений
