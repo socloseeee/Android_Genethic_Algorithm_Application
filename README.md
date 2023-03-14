@@ -93,7 +93,7 @@ SharedPreferences settings = getSharedPreferences("PreferencesName",
 Теперь займемся кодом приложения, приведенном в файле MainActivity.java (листинг
 8.4).
 #### Листинг 8.4. Полный код приложения (файл MainActivity.java)
-`
+---java
 package corn.example.den.prefs;
 
 import android.content.SharedPreferences;
@@ -133,4 +133,4 @@ public class MainActivity extends AppCompatActivity {
         nameView.setText(name);
     }
 }
-`
+---
