@@ -89,3 +89,48 @@ SharedPreferences settings = getSharedPreferences("PreferencesName",
 значения, а таюке поле для ввода и текстовое поле для вывода сохраненной
 настройки (рис. 8.5).
 ![img.png](img.png)
+
+Теперь займемся кодом приложения, приведенном в файле MainActivity.java (листинг
+8.4).
+#### Листинг 8.4. Полный код приложения (файл MainActivity.java)
+```
+package corn.example.den.prefs;
+
+import android.content.SharedPreferences;
+import android.support.v7.app.AppCornpatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+  private static final String PREFS_FILE = "Account";
+  private static final String PREF NАМЕ = "Name";
+  SharedPreferences settings;
+  @OVerride
+  protected void onCreate(Bundle savedinstanceState) {
+    super.onCreate(savedinstanceState);
+    setContentView(R.layout.activity_main};
+    settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE);
+  }
+  
+  public void saveName(View view) {
+    // получаем введенное имя
+    EditText nameBox = (EditText) findViewByid(R.id.nameBox);
+    String name = nameBox.getText() .toString();
+    // сохраняем его в настройках
+    SharedPreferences.Editor prefEditor = settings.edit();
+    prefEditor.putString(PREF_NAМE, name);
+    prefEditor.apply();
+  }
+  
+  public void getNarne(View view) {
+    // получаем сохраненное имя
+    TextView nameView = (TextView) findViewByid(R.id.nameView);
+    String name = settings.getString(PREF_NAМE,"n/a");
+    nameView.setText(name);
+  }
+}
+```
