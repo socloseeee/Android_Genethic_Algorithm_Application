@@ -142,8 +142,8 @@ __Получить имя__. Вы должны увидеть введенное
 пользователя из ```activity```. Для этого мы можем переопределить метод ```onPause``` (листинг
 8.5).
 
-<img alt="img_1.png" height="700" src="img_1.png" width="325"/>
-<img alt="img_2.png" height="700" src="img_2.png" width="325"/>
+<img alt="img_1.png" height="700" src="img_1.png" width="315"/>
+<img alt="img_2.png" height="700" src="img_2.png" width="315"/>
 
 #### Листинг 8.5. Автоматическое сохранение настроек
 ```java
