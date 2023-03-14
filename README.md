@@ -202,7 +202,7 @@ public class MainActivity extends AppCornpatActivity {
 сложных Аndrоid-приложений .
 
 
-<img alt="img_4.png" height="65" src="img_4.png" width="65"/>  # __ЧАСТЬ III__
+# <img alt="img_4.png" height="65" src="img_4.png" width="65"/>  __ЧАСТЬ III__
 
 ## __Построение сложного приложения__
 
