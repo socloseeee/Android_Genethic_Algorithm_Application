@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:layout_centerInParent="true"
+    tools:context=".GenethicAlgorythmScript">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/a2" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#7F000000"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center|center"
+        android:scaleType="fitXY"
+        android:text="ГЕНЕТИЧЕСКИЙ АЛГОРИТМ"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="366dp"
+        android:layout_height="94dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="100dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center|center"
+        android:scaleType="fitXY"
+        android:text="НАЖМИТЕ СТАРТ ЧТОБЫ НАЧАТЬ ГЕНЕТИЧЕСКИЙ АЛГОРИТМ!"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#7F000000"
+        android:scaleType="fitXY" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="goBack"
+        android:text="Вернуться"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="StartScript"
+        android:text="Старт"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="NextActivity"
+        android:text="Далее"
+        android:layout_gravity="bottom|left"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="JSONShow"
+        android:text="Показать JSON"
+        android:layout_gravity="center|center"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"/>
+
+
+<!--        android:visibility="invisible"/>-->
+
+</FrameLayout>

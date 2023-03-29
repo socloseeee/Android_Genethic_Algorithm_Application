@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:layout_centerInParent="true"
+    tools:context=".MatrixChoose">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/a2" />
+
+    <TextView
+        android:id="@+id/textView14"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="55.5dp"
+        android:layout_gravity="bottom"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#7F000000"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#7F000000"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="top|center"
+        android:scaleType="fitXY"
+        android:text="КОЛИЧЕСТВО ПОВТОРОВ ГЕНЕТИЧЕСКОГО АЛГОРИТМА"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        tools:text="ЗАДАЙТЕ КОЛИЧЕСТВО ПОВТОРОВ ГЕНЕТИЧЕСКОГО АЛГОРИТМА" />
+
+    <TextView
+        android:id="@+id/matrix"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="293dp"
+        android:layout_gravity="center|center"
+        android:background="#7F000000"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="top|center"
+        android:scaleType="fitXY"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="NextActivity"
+        android:text="Далее"
+        android:layout_gravity="bottom|center"
+        android:layout_marginRight="90dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"
+        tools:text="Далее" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="goBack"
+        android:text="ВЕРНУТЬСЯ"
+        android:layout_marginLeft="90dp"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"
+        tools:text="Вернуться" />
+
+    <EditText
+        android:id="@+id/repeats"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="70dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="text"
+        android:text="1"
+        android:gravity="center|center"
+        android:layout_gravity="top|center"
+        android:textAlignment="gravity"
+        android:textColor="@color/black" />
+
+</FrameLayout>

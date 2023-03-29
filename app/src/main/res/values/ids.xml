@@ -7,4 +7,21 @@
     <item name="saving" type="id" />
     <item name="nameBox" type="id" />
     <item name="nameView" type="id" />
+    <item name="m" type="id" />
+    <item name="n" type="id" />
+    <item name="T1" type="id" />
+    <item name="T2" type="id" />
+    <item name="z" type="id" />
+    <item name="k" type="id" />
+    <item name="Pk" type="id" />
+    <item name="Pm" type="id" />
+    <item name="matrix" type="id" />
+    <item name="repeats" type="id" />
+    <item name="specific_method" type="id" />
+    <item name="all_methods" type="id" />
+    <item name="radio_group" type="id" />
+    <item name="radio_button1" type="id" />
+    <item name="radio_button2" type="id" />
+    <item name="radio_button3" type="id" />
+    <item name="radio_button4" type="id" />
 </resources>

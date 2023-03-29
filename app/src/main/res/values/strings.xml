@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">laba1</string>
+    <string name="app_name">GenethicAlgorythm</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -12,5 +12,5 @@
     <string name="title_activity_second">SecondActivity</string>
     <string name="channel_name">Имя канала</string>
     <string name="channel_description">Описание канала</string>
-    <string name="snooze">Здарова</string>
+    <string name="ze">Здарова</string>
 </resources>

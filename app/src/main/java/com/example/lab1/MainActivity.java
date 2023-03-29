@@ -1,182 +1,123 @@
 package com.example.lab1;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.core.app.NotificationCompat;
-import android.widget.Toast;
-import com.example.lab1.RetrofitAPI;
-import com.example.lab1.loginModel;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int NOTIFY_ID = 101;
-    private static final String CHANNEL_ID = "MyChannel";
-
-    private static final String ACTION_SNOOZE = "Кнопка";
-
-    private static final String EXTRA_NOTIFIC_ID = "Кнопочка";
-    private void createNotificationChannel(){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            CharSequence name = getString(R.string.channel_name);
-            String description = getString(R.string.channel_description);
-            int importance  = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID,name,importance);
-
-            channel.setDescription(description);
-
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-        }
-    }
-
+    private static final String PREFS_FILE = "Matrix_variables";
+    private static final String PREF_m = "m";
+    private static final String PREF_n = "n";
+    private static final String PREF_T1 = "T1";
+    private static final String PREF_T2 = "T2";
+    private static final String PREF_z = "z";
+    private static final String PREF_k = "k";
+    private static final String PREF_Pk = "Pk";
+    private static final String PREF_Pm = "Pm";
+    SharedPreferences settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        postData("userName", "password");
-        Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context,"Тестовое уведомление", Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER, 500,500);
-        toast.show();   //first_test
-
-        createNotificationChannel();
-
-        //Intent notificationintent = new Intent(context, MainActivity.class); //пример 2 для уведомления в статус баре
-
-        Intent notificationintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/freaky_timelapse"));
-
-        Intent snoozeIntent = new Intent(this, BroadcastReceiver.class);
-        snoozeIntent.setAction(ACTION_SNOOZE);
-        snoozeIntent.putExtra(EXTRA_NOTIFIC_ID,0);
-
-        PendingIntent snoozePendingIntent = PendingIntent.getBroadcast(this,0,snoozeIntent,0);
-
-
-        PendingIntent contentintent = PendingIntent.getActivity(context,
-                0, notificationintent,
-                PendingIntent.FLAG_CANCEL_CURRENT);
-        Resources res = context.getResources();
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this,CHANNEL_ID)
-                .setSmallIcon(R.drawable.notification_car11)
-                .setColor(Color.GREEN)
-                .setContentTitle("Здравствуйте")
-                .setContentText("https://vk.com/freaky_timelapse")
-                .setTicker("Info").setWhen(System.currentTimeMillis())
-                .setContentIntent(contentintent) //для примера с сайтом
-                .addAction(R.drawable.sharp_lock11,getString(R.string.snooze),snoozePendingIntent)
-                .setPriority(NotificationCompat.PRIORITY_MAX);
-
-
-
-        Notification notification = mBuilder.build();
-
-
-        NotificationManager notificationManager =(NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(NOTIFY_ID,notification);
     }
 
-    public void startNewActivity(View v) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    }
+    public void NextActivity(View v) {
 
-    public void menu_click(View v){
-        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-        startActivity(intent);
-    }
+        EditText mBox = (EditText) findViewById(R.id.m);
+        String m = mBox.getText().toString();
 
-    public void transitions_click(View v){
-        Intent intent = new Intent(MainActivity.this, com.example.lab1.TransitionActivity.class);
-        startActivity(intent);
-    }
+        EditText nBox = (EditText) findViewById(R.id.n);
+        String n = nBox.getText().toString();
 
-    public void files_click(View v){
-        Intent intent = new Intent(MainActivity.this, FilesActivity.class);
-        startActivity(intent);
-    }
+        EditText T1Box = (EditText) findViewById(R.id.T1);
+        String T1 = T1Box.getText().toString();
 
-    public void Namefiles_click(View v){
-        Intent intent = new Intent(MainActivity.this, NameFilesActivity.class);
-        startActivity(intent);
-    }
+        EditText T2Box = (EditText) findViewById(R.id.T2);
+        String T2 = T2Box.getText().toString();
 
-    private void postData(String name, String password) {
+        EditText zBox = (EditText) findViewById(R.id.z);
+        String z = zBox.getText().toString();
 
-        // below line is for displaying our progress bar.
+        EditText kBox = (EditText) findViewById(R.id.k);
+        String k = kBox.getText().toString();
 
-        // on below line we are creating a retrofit
-        // builder and passing our base url
-        Retrofit retrofit = new Retrofit.Builder()
-                // .baseUrl("https://login1.requestcatcher.com")
-                .baseUrl("https://reqres.in/api/")
-                // as we are sending data in json format so
-                // we have to add Gson converter factory
-                .addConverterFactory(GsonConverterFactory.create())
-                // at last we are building our retrofit builder.
-                .build();
-        // below line is to create an instance for our retrofit api class.
-        RetrofitAPI retrofitAPI = retrofit.create(RetrofitAPI.class);
+        EditText PkBox = (EditText) findViewById(R.id.Pk);
+        String Pk = PkBox.getText().toString();
 
-        // passing data from our text fields to our modal class.
-        loginModel modal = new loginModel(name, password);
+        EditText PmBox = (EditText) findViewById(R.id.Pm);
+        String Pm = PmBox.getText().toString();
+// сохраняем его в настройках
 
-        // calling a method to create a post and passing our modal class.
-        Call<loginModel> call = retrofitAPI.createPost(modal);
+        SharedPreferences.Editor prefEditor = settings.edit();
+        try {
 
-        // on below line we are executing our method.
-        call.enqueue(new Callback<loginModel>() {
-            @Override
-            public void onResponse(Call<loginModel> call, Response<loginModel> response) {
-                // this method is called when we get response from our api.
-
-                // on below line we are setting empty text
-                // to our both edit text.
-
-                // we are getting response from our body
-                // and passing it to our modal class.
-                loginModel responseFromAPI = response.body();
-
-                // on below line we are getting our data from modal class and adding it to our string.
-                String responseString = "Response Code : " + response.code()
-                        + "\nlogin : " + responseFromAPI.getLogin() + "\n"
-                        + "password : " + responseFromAPI.getPassword()+"\n"
-                        + "botToken : "+ responseFromAPI.getBotToken();
-
-                // below line we are setting our
-                // string to our text view.
-                Toast.makeText(MainActivity.this,responseString,Toast.LENGTH_LONG).show();
+            byte mByte = Byte.parseByte(m);
+            if (mByte < 0 || mByte > 10){
+                throw new Exception();
             }
 
-            @Override
-            public void onFailure(Call<loginModel> call, Throwable t) {
-                // setting text to our text view when
-                // we get error response from API.
-                Toast.makeText(MainActivity.this,"Error found is : " + t.getMessage(),Toast.LENGTH_LONG).show();
+            byte nByte = Byte.parseByte(n);
+            if (nByte < 0 || nByte > 8){
+                throw new Exception();
             }
-        });
-    }
 
+            byte T1Byte = Byte.parseByte(T1);
+            if (T1Byte < 0 || T1Byte > 100){
+                throw new Exception();
+            }
+
+            byte T2Byte = Byte.parseByte(T2);
+            if (T2Byte < 0 || T2Byte > 100 || T1Byte > T2Byte){
+                throw new Exception();
+            }
+
+            byte zByte = Byte.parseByte(z);
+            if (zByte < 0 || zByte > 100){
+                throw new Exception();
+            }
+
+            byte kByte = Byte.parseByte(k);
+            if (kByte < 0 || kByte > 50){
+                throw new Exception();
+            }
+
+            byte PkByte = Byte.parseByte(Pk);
+            if (PkByte < 0 || PkByte > 100){
+                throw new Exception();
+            }
+
+            byte PmByte = Byte.parseByte(Pm);
+            if (PmByte < 0 || PmByte > 100){
+                throw new Exception();
+            }
+
+            prefEditor.putInt(PREF_m, mByte);
+            prefEditor.putInt(PREF_n, nByte);
+            prefEditor.putInt(PREF_T1, T1Byte);
+            prefEditor.putInt(PREF_T2, T2Byte);
+            prefEditor.putInt(PREF_z, zByte);
+            prefEditor.putInt(PREF_k, kByte);
+            prefEditor.putInt(PREF_Pk, PkByte);
+            prefEditor.putInt(PREF_Pm, PmByte);
+            prefEditor.apply();
+
+            Intent intent = new Intent(this, MatrixChoose.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            Context context = getApplicationContext();
+            Toast toast = Toast.makeText(context,"Введено неверное значение!", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0,0);
+            toast.show();
+        }
+    }
 }

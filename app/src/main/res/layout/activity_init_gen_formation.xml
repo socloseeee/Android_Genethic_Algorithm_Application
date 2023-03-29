@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:layout_centerInParent="true"
+    tools:context=".InitGenFormation">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/a2" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#7F000000"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center|center"
+        android:scaleType="fitXY"
+        android:text="ВЫБОР МЕТОДА ФОРМИРОВАНИЯ НАЧАЛЬНОГО ПОКОЛЕНИЯ"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        tools:text="ВЫБОР МЕТОДА ФОРМИРОВАНИЯ НАЧАЛЬНОГО ПОКОЛЕНИЯ" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center"
+        android:background="#7F000000"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center|center"
+        android:scaleType="fitXY"
+        android:text="Методы"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginBottom="80dp"
+        tools:text="Методы" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center|center"
+        android:background="#7F000000"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="left|center"
+        android:scaleType="fitXY"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="goBack"
+        android:text="Вернуться"
+        tools:ignore="MissingConstraints"
+        tools:text="Вернуться" />
+
+    <Button
+        android:id="@+id/specific_method"
+        android:layout_width="110dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="specificMethod"
+        android:text="Конкретный метод"
+        tools:ignore="MissingConstraints"
+        tools:text="Конкретный метод" />
+
+    <Button
+        android:id="@+id/all_methods"
+        android:layout_width="124dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|left"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="allMethods"
+        android:text="Все методы"
+        tools:ignore="MissingConstraints"
+        tools:text="Все методы" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center|center"
+        android:layout_marginTop="55dp">
+
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50% Рандомно + 50% детерминированно"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25% Рандомно + 75% детерминированно"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:text="75% Рандомно + 25% детерминированно"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radio_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:text="50% Плотников-Зверев + 50% Барьер"
+            android:textColor="@color/white" />
+    </RadioGroup>
+</FrameLayout>

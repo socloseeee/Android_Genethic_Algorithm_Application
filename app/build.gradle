@@ -1,12 +1,36 @@
 plugins {
     id 'com.android.application'
+    id 'com.chaquo.python'
 }
+
+
 
 android {
     namespace 'com.example.lab1'
     compileSdk 33
 
     defaultConfig {
+
+        sourceSets {
+            main {
+                python.srcDir "some/main/python"
+            }
+        }
+
+        python {
+            version "3.8"
+            buildPython "C:/ProgramData/Anaconda3/python.exe"
+            pip {
+                install "tqdm"
+                install "colorama"
+                install "matplotlib"
+            }
+        }
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
         applicationId "com.example.lab1"
         minSdk 24
         targetSdk 33
@@ -29,7 +53,7 @@ android {
 }
 
 dependencies {
-
+    implementation 'io.apisense:rhino-android:1.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'

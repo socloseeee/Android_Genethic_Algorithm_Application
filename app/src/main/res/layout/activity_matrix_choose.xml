@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:layout_centerInParent="true"
+    tools:context=".MatrixChoose">
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_x="348dp"-->
+<!--        android:layout_y="6dp"-->
+<!--        app:srcCompat="@drawable/dbbutt" />-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/a2" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#7F000000"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center|center"
+        android:scaleType="fitXY"
+        android:text="ВЫБОР МАТРИЦЫ"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        tools:text="ВЫБОР МАТРИЦЫ" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="goBack"
+        android:text="Вернуться"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"
+        tools:text="Вернуться" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveMatrix"
+        android:text="Новая матрица"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"
+        tools:text="Новая матрица" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="124dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="getMatrix"
+        android:text="Готовый вариант"
+        android:layout_gravity="bottom|left"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints"
+        tools:text="Готовый вариант" />
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_x="169dp"-->
+<!--        android:layout_y="122dp"-->
+<!--        android:text="Silent"-->
+<!--        android:textColor="@color/white" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_x="170dp"-->
+<!--        android:layout_y="181dp"-->
+<!--        android:text="Fast"-->
+<!--        android:textColor="@color/white" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_x="170dp"-->
+<!--        android:layout_y="236dp"-->
+<!--        android:text="Balance"-->
+<!--        android:textColor="@color/white" />-->
+
+</FrameLayout>
