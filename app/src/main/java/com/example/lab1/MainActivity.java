@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE);
     }
 
     public void NextActivity(View v) {
