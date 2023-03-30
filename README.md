@@ -7,15 +7,11 @@ https://www.python.org/)
 [![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](
 https://www.java.com)
 
----
-
 ## Table of Contents
 
 + [About](#about)
 + [Requirements](#installing)
 + [Application Review](#apprev)
-
----
 
 ## About <a name = "about"></a>
 
@@ -25,8 +21,6 @@ Python support is provided by:
 
 [![](https://img.shields.io/badge/CHAQUOPY-8B89CC?style=for-the-badge&logo=java&logoColor=white)](
 https://chaquo.com/chaquopy/)
-
----
 
 ## Requirements <a name = "installing"></a>
 
@@ -118,8 +112,6 @@ https://chaquo.com/chaquopy/)
         implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     }
     ```
-
----
     
 ## Application Review <a name = "apprev"></a>
 
