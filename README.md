@@ -7,11 +7,15 @@ https://www.python.org/)
 [![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](
 https://www.java.com)
 
+---
+
 ## Table of Contents
 
 + [About](#about)
 + [Requirements](#installing)
 + [Application Review](#apprev)
+
+---
 
 ## About <a name = "about"></a>
 
@@ -22,9 +26,11 @@ Python support is provided by:
 [![](https://img.shields.io/badge/CHAQUOPY-8B89CC?style=for-the-badge&logo=java&logoColor=white)](
 https://chaquo.com/chaquopy/)
 
+---
+
 ## Requirements <a name = "installing"></a>
 
-1. build.gradle(project)
+1. build.gradle(project) 
     ```androiddatabinding
     buildscript {
         repositories {
@@ -113,87 +119,121 @@ https://chaquo.com/chaquopy/)
     }
     ```
 
+---
+    
 ## Application Review <a name = "apprev"></a>
 
 ### 1. When the program starts, its start window appears, where we can set the starting variables.
 
 
-<img alt=img_1.png height="640" src="https://user-images.githubusercontent.com/65871712/228956135-5c1996c3-0174-4010-8897-fc0325c57b6a.png" width="299"/>
-
+<img alt="img_1.png" height="640" src="img_1.png" width="299"/>
+       
     If the data entered by the user is correctly validated, the transition 
     to the next window occurs, otherwise errors by type pop up:
       
+___
+      
     Error #1 (going beyond acceptable values):
 
-<img alt="img_2.png" height="640" src="https://user-images.githubusercontent.com/65871712/228956459-4cbd7b56-6460-4a12-84b4-9740b7149066.png" width="299"/>
+<img alt="img_2.png" height="640" src="img_2.png" width="299"/>
+
+___
 
     Error #2 (Incorrect data type):
 
-<img alt="img_3.png" height="640" src="https://user-images.githubusercontent.com/65871712/228956701-db289115-ae99-4352-907f-6e0722e3c0e7.png" width="299"/>
+<img alt="img_3.png" height="640" src="img_3.png" width="299"/>
+
+---
 
 ### 2. Switching to the next window with correct validation of the entered data:
 
-<img alt="img_4.png" height="640" src="https://user-images.githubusercontent.com/65871712/228956775-5584c7a4-4fd6-4c3e-94b9-cb6d0c41913c.png" width="299"/>
+<img alt="img_4.png" height="640" src="img_4.png" width="299"/>
+
+---
 
     When you click on the "ГОТОВЫЙ ВАРИАНТ"(“READY OPTION”) button, 
     the matrix is read from the file system generated during the old iterations 
     and goes to the next:
 
-<img alt="img_5.png" height="640" src="https://user-images.githubusercontent.com/65871712/228956840-3926eb30-8a52-4ee1-8c9e-460d08427a10.png" width="299"/> <img alt="img_6.png" height="640" src="https://user-images.githubusercontent.com/65871712/228956889-5ccad1cd-55d7-4f8d-bc33-a27e46c04e8a.png" width="299"/>
+<img alt="img_5.png" height="640" src="img_5.png" width="299"/> <img alt="img_6.png" height="640" src="img_6.png" width="299"/>
+
+---
 
     When you click on the "НОВАЯ МАТРИЦА"(“NEW MATRIX”) button, 
     a new matrix is generated, uploaded to a file inside the system 
     and moved to the next window:
 
-<img alt="img_7.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957474-27a08bda-10a8-4fdf-9fae-0b3e713408b8.png" width="299"/> <img alt="img_8.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957513-8c4f83db-143b-4a6d-9e38-b8d71d2f45ee.png" width="299"/>
+<img alt="img_7.png" height="640" src="img_7.png" width="299"/> <img alt="img_8.png" height="640" src="img_8.png" width="299"/>
+
+---
 
     Validation check for the field (EditText Object) repeats:
 
-<img alt="img_9.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957583-7ae512fc-cca5-4332-acd7-0d5ef47118a6.png" width="299"/> <img alt="img_10.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957640-9afa4817-9d63-46fd-809d-0e9f2d28356b.png" width="299"/>
+<img alt="img_9.png" height="640" src="img_9.png" width="299"/> <img alt="img_10.png" height="640" src="img_10.png" width="299"/>
+
+---
 
 ### 3. Switching to the next window with correct data validation:
 
-<img alt="img_11.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957715-c099dd34-8a33-42cf-beaf-b50547bc2be5.png" width="299"/>
+<img alt="img_11.png" height="640" src="img_11.png" width="299"/>
+
+---
 
     When you click on the "КОНКРЕТНЫЙ МЕТОД"(“SPECIFIC METHOD”) button without 
     selecting more than one of the methods (RadioButton objects), the following 
     error window will pop up:
+    
+<img alt="img_12.png" height="640" src="img_12.png" width="299"/> <img alt="img_13.png" height="640" src="img_13.png" width="299"/>
 
-<img alt="img_12.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957767-5b3b1366-9068-4409-9c0f-1b0e722c5732.png" width="299"/> <img alt="img_13.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957797-78bfa87f-88a5-4d12-bba1-f0d7cbf6c8a7.png" width="299"/>
+---
 
     Transition with the Method Selection combination + Specific Method/All methods:
 
-<img alt="img_14.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957846-a95bf5ea-b2fa-45c2-af76-155b3fe24e44.png" width="299"/>
+<img alt="img_14.png" height="640" src="img_14.png" width="299"/>
+
+---
 
     When you click on the “NEXT” button without selecting any of the methods 
     (RadioButton objects), the following error window will pop up:
 
-<img alt="img_15.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957889-c6e35c9e-6f42-4b58-8abc-850d873c7c7f.png" width="299"/> <img alt="img_16.png" height="640" src="https://user-images.githubusercontent.com/65871712/228957948-ce29b0d8-ddae-4b59-b9c8-b621d2957784.png" width="299"/>
+<img alt="img_15.png" height="640" src="img_15.png" width="299"/> <img alt="img_16.png" height="640" src="img_16.png" width="299"/>
+
+---
 
 ### 4. Switching to the next window with correct data validation:
 
-<img alt="img_17.png" height="640" src="https://user-images.githubusercontent.com/65871712/228958001-601401bd-f597-432b-bff3-f19ea9b301b8.png" width="299"/>
+<img alt="img_17.png" height="640" src="img_17.png" width="299"/>
+
+---
 
     When you click on the ("СТАРТ")“START” button, the Genethic Algorythm start 
     is initialized:
 
-<img alt="img_18.png" height="640" src="https://user-images.githubusercontent.com/65871712/228959356-6dddfcb6-61c4-4fa2-a28c-115e8b7c946e.png" width="299"/> <img alt="img_19.png" height="640" src="https://user-images.githubusercontent.com/65871712/228959415-3259adde-3307-43bd-8717-1d7a83159400.png" width="299"/>
+<img alt="img_18.png" height="640" src="img_18.png" width="299"/> <img alt="img_19.png" height="640" src="img_19.png" width="299"/>
+
+---
 
     When you click on the “SHOW JSON” button, a JSON file is shown that is fed 
     inside the python-script:
 
-<img alt="img_20.png" height="640" src="https://user-images.githubusercontent.com/65871712/228958398-e39197a5-13ba-41e9-a901-7600f8027757.png" width="299"/>
+<img alt="img_20.png" height="640" src="img_20.png" width="299"/>
+
+---
 
 ### 5. Switching to the next window when clicking on the "ДАЛЕЕ"(“NEXT”) button:
 
-<img alt="img_21.png" height="640" src="https://user-images.githubusercontent.com/65871712/228958342-a6da383c-c87e-4666-a006-68868c54f584.png" width="299"/>
+<img alt="img_21.png" height="640" src="img_21.png" width="299"/>
+
+---
 
     When you click on the “OK" button, the generation of histograms begins:
 
-<img alt="img_22.png" height="640" src="https://user-images.githubusercontent.com/65871712/228958289-6efdd959-05d9-4b3f-bf2f-25deb0cd8c33.png" width="299"/>
+<img alt="img_22.png" height="640" src="img_22.png" width="299"/>
+
+---
 
     Clicking on the histogram takes you to the demo window:
 
-<img alt="img_23.png" height="640" src="https://user-images.githubusercontent.com/65871712/228958253-d255e82f-091e-4ae4-9b6d-4164beddb844.png" width="299"/> <img alt="img_24.png" height="640" src="https://user-images.githubusercontent.com/65871712/228958213-b1c877b4-15cb-4515-a1c8-0991d568faa1.png" width="299"/>
+<img alt="img_23.png" height="640" src="img_23.png" width="299"/> <img alt="img_24.png" height="640" src="img_24.png" width="299"/>
 
 ---
