@@ -72,8 +72,8 @@ class KThread extends Thread {
         while (AnotherThread.isAlive()) {
             i++;
             number = (int) (i / (val * repeat * 1.9));
-            progressBar.setProgress(i);
             if (number < 90) {
+                progressBar.setProgress(i);
                 tv.setText((int) number + "%");
             }
         }
@@ -83,6 +83,7 @@ class KThread extends Thread {
             tv.setText((int) number + "%");
             progressBar.setProgress((int) (i));
         }
+        tv.setText((int) 100 + "%");
     }
 }
 
