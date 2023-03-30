@@ -177,7 +177,7 @@ https://chaquo.com/chaquopy/)
     When you click on the ("СТАРТ")“START” button, the Genethic Algorythm start 
     is initialized:
 
-<img alt="img_18.png" height="640" src="img_18.png" width="299"/> <img alt="img_19.png" height="640" src="img_19.png" width="299"/>
+<img alt="img_18.png" height="640" src="https://user-images.githubusercontent.com/65871712/228959356-6dddfcb6-61c4-4fa2-a28c-115e8b7c946e.png" width="299"/> <img alt="img_19.png" height="640" src="https://user-images.githubusercontent.com/65871712/228959415-3259adde-3307-43bd-8717-1d7a83159400.png" width="299"/>
 
     When you click on the “SHOW JSON” button, a JSON file is shown that is fed 
     inside the python-script:
