@@ -118,7 +118,7 @@ https://chaquo.com/chaquopy/)
 ### 1. When the program starts, its start window appears, where we can set the starting variables.
 
 
-<img alt="img_1.png" height="640" src="img_1.png" width="299"/>
+<img alt=img_1.png height="640" src="https://user-images.githubusercontent.com/65871712/228956135-5c1996c3-0174-4010-8897-fc0325c57b6a.png" width="299"/>
        
     If the data entered by the user is correctly validated, the transition 
     to the next window occurs, otherwise errors by type pop up:
@@ -127,7 +127,7 @@ ___
       
     Error #1 (going beyond acceptable values):
 
-<img alt="img_2.png" height="640" src="img_2.png" width="299"/>
+<img alt="img_2.png" height="640" src="https://user-images.githubusercontent.com/65871712/228956459-4cbd7b56-6460-4a12-84b4-9740b7149066.png" width="299"/>
 
 ___
 
