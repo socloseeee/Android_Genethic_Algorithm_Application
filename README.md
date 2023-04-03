@@ -6,6 +6,8 @@ https://developer.android.com/studio/intro)
 https://www.python.org/)
 [![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](
 https://www.java.com)
+[![](https://img.shields.io/badge/Matplotlib-414141?style=for-the-badge&logo=java&logoColor=white)](https://matplotlib.org/)
+[![](https://img.shields.io/badge/heuristic-CC6699?style=for-the-badge&logo=java&logoColor=white)](https://github.com/socloseeee/Diploma_Scheduling_Theory)
 
 ## Table of Contents
 
