@@ -1,5 +1,7 @@
 # Genetic Algorithm Android app
 
+(APK FILE:)(https://drive.google.com/drive/folders/1uzCf2waz_glABhLM8oimPm-iVHa6nHiZ)
+
 [![](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](
 https://developer.android.com/studio/intro)
 [![](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&logoColor=white)](
